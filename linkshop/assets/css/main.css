@@ -1,0 +1,273 @@
+:root {
+    --ls-primary-color: #2a7ae4;
+    --ls-text-color: #1f2933;
+    --ls-border: #e5e7eb;
+    --ls-bg: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Vazirmatn", "IRANSans", sans-serif;
+    background: var(--ls-bg);
+    color: var(--ls-text-color);
+    direction: rtl;
+}
+
+a {
+    color: var(--ls-primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: min(1200px, 94%);
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--ls-border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.site-branding .site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ls-text-color);
+}
+
+.primary-nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-nav .menu li {
+    display: inline-flex;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header-cart .cart-count {
+    background: var(--ls-primary-color);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+}
+
+.site-content {
+    padding: 2rem 0;
+}
+
+.content-area article {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--ls-border);
+    border-radius: 8px;
+}
+
+.entry-title {
+    margin-top: 0;
+}
+
+.button, .wp-block-button__link, button, input[type="submit"] {
+    background: var(--ls-primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-secondary {
+    background: #f3f4f6;
+    color: var(--ls-text-color);
+}
+
+.site-footer {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 2rem 0;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.footer-menu .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu .menu li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu a {
+    color: #e2e8f0;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+.home-hero {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, rgba(42,122,228,0.06), rgba(42,122,228,0.12));
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.hero-content h1 {
+    margin: 0 0 0.5rem;
+}
+
+.home-products h2 {
+    margin: 2rem 0 1rem;
+}
+
+.ls-owner-dashboard .ls-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.ls-kpi-card {
+    background: #fff;
+    border: 1px solid var(--ls-border);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.ls-kpi-card strong {
+    font-size: 1.4rem;
+}
+
+.ls-dashboard-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ls-panel {
+    background: #fff;
+    border: 1px solid var(--ls-border);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.ls-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ls-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ls-table-wrapper th,
+.ls-table-wrapper td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--ls-border);
+    text-align: right;
+}
+
+.ls-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ls-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--ls-border);
+}
+
+.ls-badge {
+    background: rgba(42,122,228,0.1);
+    color: var(--ls-primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.ls-badge-warning {
+    background: #fff1f2;
+    color: #be123c;
+}
+
+.ls-store-settings .ls-field {
+    margin-bottom: 1rem;
+}
+
+.ls-store-settings label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.ls-store-settings input[type="text"],
+.ls-store-settings input[type="color"],
+.ls-store-settings input[type="file"],
+.ls-store-settings input[type="email"],
+.ls-store-settings input[type="tel"],
+.ls-store-settings textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--ls-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .primary-nav .menu {
+        flex-wrap: wrap;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
