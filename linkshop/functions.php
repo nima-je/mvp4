@@ -51,3 +51,11 @@ function linkshop_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'linkshop_enqueue_assets' );
 
+/**
+ * Load textdomain.
+ */
+function linkshop_load_textdomain() {
+    load_theme_textdomain( 'linkshop', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'linkshop_load_textdomain' );
+
