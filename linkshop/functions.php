@@ -43,9 +43,19 @@ function linkshop_enqueue_assets() {
 
     wp_enqueue_script( 'linkshop-main', LINKSHOP_URI . 'assets/js/main.js', array( 'jquery' ), filemtime( $main_js ), true );
 
-    $primary_color = function_exists( 'linkshop_get_primary_color' ) ? linkshop_get_primary_color() : '#2a7ae4';
-    $custom_css    = ':root{--ls-primary-color:' . esc_attr( $primary_color ) . ';}';
+    $store_settings = linkshop_get_store_settings();
+    $accent_color   = isset( $store_settings['accent_color'] ) ? $store_settings['accent_color'] : '#2a7ae4';
+
+    $custom_css = ':root{--ls-primary-color:' . esc_attr( $accent_color ) . ';}';
     wp_add_inline_style( 'linkshop-main', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'linkshop_enqueue_assets' );
+
+/**
+ * Load textdomain.
+ */
+function linkshop_load_textdomain() {
+    load_theme_textdomain( 'linkshop', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'linkshop_load_textdomain' );
 

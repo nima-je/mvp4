@@ -46,15 +46,6 @@ function linkshop_wc_wrapper_end() {
 add_action( 'woocommerce_after_main_content', 'linkshop_wc_wrapper_end', 10 );
 
 /**
- * Remove default WooCommerce wrappers to prevent nested containers.
- */
-function linkshop_override_wc_wrappers() {
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
-    remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-}
-add_action( 'after_setup_theme', 'linkshop_override_wc_wrappers' );
-
-/**
  * Layout helpers.
  */
 function linkshop_wc_body_class( $classes ) {

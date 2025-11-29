@@ -10,7 +10,7 @@ get_header();
 ?>
 <div class="container home-hero">
     <div class="hero-content">
-        <h1><?php echo esc_html( function_exists( 'linkshop_get_store_name' ) ? linkshop_get_store_name() : get_bloginfo( 'name' ) ); ?></h1>
+        <h1><?php bloginfo( 'name' ); ?></h1>
         <p><?php bloginfo( 'description' ); ?></p>
         <?php if ( function_exists( 'wc_get_page_permalink' ) ) : ?>
             <a class="button" href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>"><?php esc_html_e( 'مشاهده محصولات', 'linkshop' ); ?></a>
